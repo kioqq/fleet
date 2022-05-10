@@ -97,7 +97,7 @@ pub fn add_rustc_wrapper_and_target_configs(path: &str, sccache_path: &str) {
         },
         profile: Profile {
             release: ProfileValues {
-                split: Some(String::from("...")),
+                split: Some(String::from("off")),
 
                 opt_level: 3,
                 debug: 0,
