@@ -170,9 +170,9 @@ The blazing fast build tool for Rust.
     }
 
     pub fn run() {
-        if cfg!(windows) {
-            let _ = ansi_term::enable_ansi_support();
-        }
+        // if cfg!(windows) {
+        //     let _ = ansi_term::enable_ansi_support();
+        // }
 
         let args = std::env::args().collect::<Vec<String>>();
         let app = App::new();
@@ -244,7 +244,7 @@ The blazing fast build tool for Rust.
                         ],
                     };
 
-                    let linker_selected = match select.run().unwrap() {
+                    let _linker_selected = match select.run().unwrap() {
                         0 => "lld",
                         1 => "mold",
                         _ => "",
